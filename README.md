@@ -1,5 +1,3 @@
-# Hello CUGL
+# Tuggable
 
-This simple demo shows off asset loading basics with a very simple scene graph 
-(with only two elements). It is a good place to familiarize yourself with the 
-engine.
+Fidget toys for mobile devices, built on CUGL. Inspired by Fidgetable on the AppStore.
