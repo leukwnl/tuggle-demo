@@ -1,0 +1,41 @@
+{
+    "textures": {
+        "logo": {
+            "file":     "textures/logo.png",
+            "minfilter":"linear-linear",
+            "magfilter": "linear",
+            "mipmaps":   true,
+            "wrapS":    "clamp",
+            "wrapT":    "clamp"
+        },
+        "close-normal": {
+            "file":     "textures/CloseNormal.png",
+            "minfilter":"nearest",
+            "magfilter":"linear",
+            "wrapS":    "clamp",
+            "wrapT":    "clamp"
+        },
+        "close-selected": {
+            "file":     "textures/CloseSelected.png",
+            "minfilter":"nearest",
+            "magfilter":"linear",
+            "wrapS":    "clamp",
+            "wrapT":    "clamp"
+        }
+    },
+    "fonts": {
+        "felt": {
+            "file":     "fonts/MarkerFelt.ttf",
+            "size":     64,
+            "padding":  10
+        },
+        "sans": {
+            "file":     "fonts/Roboto-Bold.ttf",
+            "size":     48
+        },
+        "sans-small": {
+            "file":     "fonts/Roboto-Regular.ttf",
+            "size":     32
+        }
+    }
+}
