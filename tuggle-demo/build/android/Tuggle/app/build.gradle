@@ -9,7 +9,7 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 34
     defaultConfig {
-        applicationId "edu.cornell.gdiac.fidget.G4EBEX69"
+        applicationId "com.lukeleh.tuggle"
         minSdk 26
         targetSdkVersion 34
         versionCode 1
@@ -37,7 +37,7 @@ android {
     lint {
         abortOnError false
     }
-    namespace 'edu.cornell.gdiac.fidget.G4EBEX69'
+    namespace 'com.lukeleh.tuggle'
     sourceSets.main {
         jniLibs.srcDir 'libs'
         assets.srcDirs += "../../../../assets"

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "EB0F3C9527FB9DCB0037CC66"
-               BuildableName = "Tuggle.app"
+               BuildableName = "Tuggle for Cuggle.app"
                BlueprintName = "tuggle-mac"
                ReferencedContainer = "container:Tuggle.xcodeproj">
             </BuildableReference>
@@ -45,7 +45,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EB0F3C9527FB9DCB0037CC66"
-            BuildableName = "Tuggle.app"
+            BuildableName = "Tuggle for Cuggle.app"
             BlueprintName = "tuggle-mac"
             ReferencedContainer = "container:Tuggle.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "EB0F3C9527FB9DCB0037CC66"
-            BuildableName = "Tuggle.app"
+            BuildableName = "Tuggle for Cuggle.app"
             BlueprintName = "tuggle-mac"
             ReferencedContainer = "container:Tuggle.xcodeproj">
          </BuildableReference>

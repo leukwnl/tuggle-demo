@@ -1,9 +1,9 @@
 # ogg pkg-config file
 
-prefix=C:/Program Files (x86)/TriggerHappy
-exec_prefix=C:/Program Files (x86)/TriggerHappy/bin
-libdir=C:/Program Files (x86)/TriggerHappy/lib
-includedir=C:/Program Files (x86)/TriggerHappy/include
+prefix=/usr/local
+exec_prefix=/usr/local/bin
+libdir=/usr/local/lib
+includedir=/usr/local/include
 
 Name: ogg
 Description: ogg is a library for manipulating ogg bitstreams

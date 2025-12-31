@@ -44,6 +44,9 @@
     <ClInclude Include="..\..\..\source\fidgetables\F7samba.h">
       <Filter>Source Files\fidgetables</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\source\fidgetables\HapticButton.h">
+      <Filter>Source Files\fidgetables</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\..\source\fidgetables\F1tancho.h">
       <Filter>Source Files\fidgetables</Filter>
     </ClInclude>
@@ -77,6 +80,9 @@
       <Filter>Source Files\fidgetables</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\source\fidgetables\F3snakeyes.cpp">
+      <Filter>Source Files\fidgetables</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\fidgetables\HapticButton.cpp">
       <Filter>Source Files\fidgetables</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\source\fidgetables\F7samba.cpp">

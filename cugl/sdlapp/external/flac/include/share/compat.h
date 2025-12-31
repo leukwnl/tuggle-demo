@@ -64,10 +64,8 @@
 #endif
 #else
 #ifndef HAVE_FSEEKO
-#ifndef __ANDROID__
 #define fseeko fseek
 #define ftello ftell
-#endif
 #define FLAC__off_t long
 #define FLAC__OFF_T_MAX LONG_MAX
 #else

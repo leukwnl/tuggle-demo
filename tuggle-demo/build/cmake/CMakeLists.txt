@@ -119,7 +119,7 @@ add_executable(Tuggle ${SOURCE_FILES})
 set_target_properties(
     Tuggle
     PROPERTIES
-        OUTPUT_NAME "Tuggle"
+        OUTPUT_NAME "Tuggle for Cuggle"
         SUFFIX ".exe"
 )
 

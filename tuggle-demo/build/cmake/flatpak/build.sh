@@ -19,29 +19,29 @@ clean() {
 
 # Create the flatpak installation
 build() {
-    echo "Building edu.cornell.gdiac.fidget.flatpak"
+    echo "Building com.lukeleh.tuggle.flatpak"
 
     # Create the flatpak
-    flatpak-builder --repo=repo --force-clean cache ${BASEDIR}/edu.cornell.gdiac.fidget.yml
-    flatpak build-bundle repo ${BASEDIR}/edu.cornell.gdiac.fidget.flatpak edu.cornell.gdiac.fidget
+    flatpak-builder --repo=repo --force-clean cache ${BASEDIR}/com.lukeleh.tuggle.yml
+    flatpak build-bundle repo ${BASEDIR}/com.lukeleh.tuggle.flatpak com.lukeleh.tuggle
     rm -rf ${INSTDIR}
     mkdir ${INSTDIR}
-    mv ${BASEDIR}/edu.cornell.gdiac.fidget.flatpak ${INSTDIR}/
+    mv ${BASEDIR}/com.lukeleh.tuggle.flatpak ${INSTDIR}/
 
     # Create the Steam shortcut
-    echo "#!/bin/sh" >> "${INSTDIR}/Tuggle.exe"
-    echo "flatpak run edu.cornell.gdiac.fidget" >> "${INSTDIR}/Tuggle.exe"
-    chmod a+x "${INSTDIR}/Tuggle.exe"
+    echo "#!/bin/sh" >> "${INSTDIR}/TuggleforCuggle.exe"
+    echo "flatpak run com.lukeleh.tuggle" >> "${INSTDIR}/TuggleforCuggle.exe"
+    chmod a+x "${INSTDIR}/TuggleforCuggle.exe"
 
     # Create the flatpak installer
     echo "#!/bin/sh" >> ${INSTDIR}/install.sh
     echo "BASEDIR=\$(dirname \$0)" >> ${INSTDIR}/install.sh
-    echo "flatpak install \${BASEDIR}/edu.cornell.gdiac.fidget.flatpak " >> ${INSTDIR}/install.sh
+    echo "flatpak install \${BASEDIR}/com.lukeleh.tuggle.flatpak " >> ${INSTDIR}/install.sh
     chmod a+x ${INSTDIR}/install.sh
 
     # Create the flatpak uninstaller
     echo "#!/bin/sh" >> ${INSTDIR}/uninstall.sh
-    echo "flatpak uninstall edu.cornell.gdiac.fidget " >> ${INSTDIR}/uninstall.sh
+    echo "flatpak uninstall com.lukeleh.tuggle " >> ${INSTDIR}/uninstall.sh
     chmod a+x ${INSTDIR}/uninstall.sh
 
     echo "Files written to ${INSTDIR}"

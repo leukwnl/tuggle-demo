@@ -106,7 +106,6 @@ file(GLOB CORE_FILES
   ${CUGL_DIR}/source/core/actions/*.cpp
   ${CUGL_DIR}/source/core/assets/*.c
   ${CUGL_DIR}/source/core/assets/*.cpp
-  ${CUGL_DIR}/source/assets/*.cpp
   ${CUGL_DIR}/source/core/input/*.cpp
   ${CUGL_DIR}/source/core/io/*.cpp
   ${CUGL_DIR}/source/core/math/*.cpp

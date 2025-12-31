@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		184ED53E2F04916C0085B3D0 /* HapticButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 184ED53D2F04916C0085B3D0 /* HapticButton.cpp */; };
-		184ED53F2F04916C0085B3D0 /* HapticButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 184ED53D2F04916C0085B3D0 /* HapticButton.cpp */; };
 		AB084F9D0E7DEE813F658313 /* textures in Resources */ = {isa = PBXBuildFile; fileRef = AACD441E407C552AECEE9B33 /* textures */; };
 		ABBCECE05884D7F0EED5F50D /* json in Resources */ = {isa = PBXBuildFile; fileRef = AA1BA6EDE03659A8C6BB7FDA /* json */; };
 		ABEB4F30ABE79246F2AF327A /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = AACD79EE60E78EEA58EF7CC9 /* fonts */; };
@@ -21,6 +19,7 @@
 		BB7FDB6F500165F806109AE3 /* F5fellowship.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BAD235265C7693BCAC1AE3C3 /* F5fellowship.cpp */; };
 		BB9ED15A5C8FD6CDF0D9D6CE /* F8karting.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BADDC9E7FD9B6ADF346DAAE1 /* F8karting.cpp */; };
 		BBAC294D90DE4BCD948FFB8B /* F6katamari.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA8C3DAB9F3A2E5B735E6CA6 /* F6katamari.cpp */; };
+		BBACDC1F7BB4E8BF100F8CDF /* HapticButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BAF8AD1EFAA16E2AB65CE9CF /* HapticButton.cpp */; };
 		BBB8FBFBF1FBFCEAFB0F3CDB /* F7samba.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BAFB50BD0DE264191CD129D0 /* F7samba.cpp */; };
 		BBCF590CECE90BA5EE6AADD2 /* F1tancho.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA04AE879B36FD52BA9DDDB4 /* F1tancho.cpp */; };
 		BBCFC0FCCAFDF2EDD613DAB7 /* F3snakeyes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BAC6AC3767ECF3ECC64812F1 /* F3snakeyes.cpp */; };
@@ -40,6 +39,7 @@
 		BCA54130C02BDB4CBF4ABDAA /* F4traffic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA9C6D2B2DFCC319DB12EAED /* F4traffic.cpp */; };
 		BCB4EB365C5F1B043B353E27 /* F3snakeyes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BAC6AC3767ECF3ECC64812F1 /* F3snakeyes.cpp */; };
 		BCC9F1DB66F2D8FB5B272D8E /* F7samba.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BAFB50BD0DE264191CD129D0 /* F7samba.cpp */; };
+		BCEBEADE7E8FFDA9CBCFAF95 /* HapticButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BAF8AD1EFAA16E2AB65CE9CF /* HapticButton.cpp */; };
 		BCFAAB022CD9CD93B6D5BD01 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BA74D663E7C15A3342E7A1F8 /* main.cpp */; };
 		EB0F3CB827FB9FD40037CC66 /* Mac.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB0F3CB327FB9FD40037CC66 /* Mac.xcassets */; };
 		EB0F3CD527FBA2190037CC66 /* ForceFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB0F3CC727FBA2180037CC66 /* ForceFeedback.framework */; };
@@ -168,8 +168,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		184ED53C2F04916C0085B3D0 /* HapticButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HapticButton.h; sourceTree = "<group>"; };
-		184ED53D2F04916C0085B3D0 /* HapticButton.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HapticButton.cpp; sourceTree = "<group>"; };
 		AA1BA6EDE03659A8C6BB7FDA /* json */ = {isa = PBXFileReference; lastKnownFileType = folder; path = json; sourceTree = "<group>"; };
 		AACD441E407C552AECEE9B33 /* textures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = textures; sourceTree = "<group>"; };
 		AACD79EE60E78EEA58EF7CC9 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
@@ -197,8 +195,10 @@
 		BAF1FD7E13A92DBFCFC0BB0B /* InputController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = InputController.cpp; sourceTree = "<group>"; };
 		BAF58FAECACE8E1675ECEF62 /* InputController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputController.h; sourceTree = "<group>"; };
 		BAF7E5B4FEA0F2ACCEC3FD92 /* F2sampler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = F2sampler.cpp; sourceTree = "<group>"; };
+		BAF8AD1EFAA16E2AB65CE9CF /* HapticButton.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HapticButton.cpp; sourceTree = "<group>"; };
 		BAFB50BD0DE264191CD129D0 /* F7samba.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = F7samba.cpp; sourceTree = "<group>"; };
-		EB0F3C9627FB9DCB0037CC66 /* Tuggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tuggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAFC1C6CD9744AE8C9B9888B /* HapticButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HapticButton.h; sourceTree = "<group>"; };
+		EB0F3C9627FB9DCB0037CC66 /* Tuggle for Cuggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tuggle for Cuggle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB0F3CB027FB9FD40037CC66 /* Landscape.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Landscape.storyboard; sourceTree = "<group>"; };
 		EB0F3CB127FB9FD40037CC66 /* iOS.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = iOS.xcassets; sourceTree = "<group>"; };
 		EB0F3CB227FB9FD40037CC66 /* macos.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = macos.entitlements; sourceTree = "<group>"; };
@@ -220,7 +220,7 @@
 		EB0F3CD427FBA2190037CC66 /* Metal.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Metal.framework; path = System/Library/Frameworks/Metal.framework; sourceTree = SDKROOT; };
 		EB163904295693D90090F7D4 /* cugl.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = cugl.xcodeproj; path = cugl/cugl.xcodeproj; sourceTree = "<group>"; };
 		EB6E0E5D298C1A3300704E87 /* licenses */ = {isa = PBXFileReference; lastKnownFileType = folder; name = licenses; path = ../../../../cugl/licenses; sourceTree = "<group>"; };
-		EBC7AEC227FBB41F001F1467 /* Tuggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tuggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EBC7AEC227FBB41F001F1467 /* Tuggle for Cuggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tuggle for Cuggle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBC7AEF027FBBEF5001F1467 /* ios.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ios.plist; sourceTree = "<group>"; };
 		EBDD8138293CE9F8000BED3C /* CoreHaptics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreHaptics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreHaptics.framework; sourceTree = DEVELOPER_DIR; };
 		EBDD8139293CE9F8000BED3C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
@@ -307,11 +307,10 @@
 		CD8BDC440556A5569B9EE7F4 /* fidgetables */ = {
 			isa = PBXGroup;
 			children = (
-				184ED53C2F04916C0085B3D0 /* HapticButton.h */,
-				184ED53D2F04916C0085B3D0 /* HapticButton.cpp */,
 				BAD235265C7693BCAC1AE3C3 /* F5fellowship.cpp */,
 				BA8C3DAB9F3A2E5B735E6CA6 /* F6katamari.cpp */,
 				BAC6AC3767ECF3ECC64812F1 /* F3snakeyes.cpp */,
+				BAF8AD1EFAA16E2AB65CE9CF /* HapticButton.cpp */,
 				BAFB50BD0DE264191CD129D0 /* F7samba.cpp */,
 				BA9C6D2B2DFCC319DB12EAED /* F4traffic.cpp */,
 				BA04AE879B36FD52BA9DDDB4 /* F1tancho.cpp */,
@@ -322,6 +321,7 @@
 				BA01C2AFC2CEB4FCB708DBA8 /* F2sampler.h */,
 				BA7DAFB786B3033001DE8984 /* F4traffic.h */,
 				BA67CBB1D9FC3CB58E23F8FA /* F7samba.h */,
+				BAFC1C6CD9744AE8C9B9888B /* HapticButton.h */,
 				BAAEA0AEAA6AE84AFCD54A34 /* F1tancho.h */,
 				BACEFBBF5259F04B0B7B5DA1 /* F5fellowship.h */,
 				BAE6BBD6AE4EAFBD9B6D65EC /* F6katamari.h */,
@@ -344,8 +344,8 @@
 		EB0F3C9727FB9DCB0037CC66 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EB0F3C9627FB9DCB0037CC66 /* Tuggle.app */,
-				EBC7AEC227FBB41F001F1467 /* Tuggle.app */,
+				EB0F3C9627FB9DCB0037CC66 /* Tuggle for Cuggle.app */,
+				EBC7AEC227FBB41F001F1467 /* Tuggle for Cuggle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -481,7 +481,7 @@
 			);
 			name = "tuggle-mac";
 			productName = app;
-			productReference = EB0F3C9627FB9DCB0037CC66 /* Tuggle.app */;
+			productReference = EB0F3C9627FB9DCB0037CC66 /* Tuggle for Cuggle.app */;
 			productType = "com.apple.product-type.application";
 		};
 		EBC7AEC127FBB41F001F1467 /* tuggle-ios */ = {
@@ -498,7 +498,7 @@
 			);
 			name = "tuggle-ios";
 			productName = "tuggle-ios";
-			productReference = EBC7AEC227FBB41F001F1467 /* Tuggle.app */;
+			productReference = EBC7AEC227FBB41F001F1467 /* Tuggle for Cuggle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -658,7 +658,7 @@
 				BB7FDB6F500165F806109AE3 /* F5fellowship.cpp in Sources */,
 				BBAC294D90DE4BCD948FFB8B /* F6katamari.cpp in Sources */,
 				BBCFC0FCCAFDF2EDD613DAB7 /* F3snakeyes.cpp in Sources */,
-				184ED53F2F04916C0085B3D0 /* HapticButton.cpp in Sources */,
+				BBACDC1F7BB4E8BF100F8CDF /* HapticButton.cpp in Sources */,
 				BBB8FBFBF1FBFCEAFB0F3CDB /* F7samba.cpp in Sources */,
 				BB6C6B9FBBF8A58EE7C6A9B5 /* F4traffic.cpp in Sources */,
 				BBCF590CECE90BA5EE6AADD2 /* F1tancho.cpp in Sources */,
@@ -679,7 +679,7 @@
 				BC9A1822D8E5F73A72A4F9C2 /* F5fellowship.cpp in Sources */,
 				BC5FBBDBF8F7456C14ABEB4E /* F6katamari.cpp in Sources */,
 				BCB4EB365C5F1B043B353E27 /* F3snakeyes.cpp in Sources */,
-				184ED53E2F04916C0085B3D0 /* HapticButton.cpp in Sources */,
+				BCEBEADE7E8FFDA9CBCFAF95 /* HapticButton.cpp in Sources */,
 				BCC9F1DB66F2D8FB5B272D8E /* F7samba.cpp in Sources */,
 				BCA54130C02BDB4CBF4ABDAA /* F4traffic.cpp in Sources */,
 				BC98E4E3BCFFBF4A59E4EA3B /* F1tancho.cpp in Sources */,
@@ -751,7 +751,6 @@
 					"$(BOX2D_INCLUDES)",
 					"$(DATACH_INCLUDES)",
 				);
-				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -819,7 +818,6 @@
 					"$(BOX2D_INCLUDES)",
 					"$(DATACH_INCLUDES)",
 				);
-				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MACOSX_DEPLOYMENT_TARGET = 12.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
@@ -863,8 +861,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.cornell.gdiac.fidget.mac.G4EBEX69;
-				PRODUCT_NAME = Tuggle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lukeleh.mac.tuggle;
+				PRODUCT_NAME = "Tuggle for Cuggle";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
@@ -902,8 +900,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = edu.cornell.gdiac.fidget.mac.G4EBEX69;
-				PRODUCT_NAME = Tuggle;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lukeleh.mac.tuggle;
+				PRODUCT_NAME = "Tuggle for Cuggle";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 			};
@@ -933,8 +931,6 @@
 					"$(DATACH_INCLUDES)",
 				);
 				INFOPLIST_FILE = Resources/ios.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Tuggle for CUGL";
-				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth to support features provided by connected devices or system services.\n";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = Portrait;
 				INFOPLIST_KEY_UIMainStoryboardFile = Portrait;
@@ -947,7 +943,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lukeleh.tuggle;
-				PRODUCT_NAME = Tuggle;
+				PRODUCT_NAME = "Tuggle for Cuggle";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -978,8 +974,6 @@
 					"$(DATACH_INCLUDES)",
 				);
 				INFOPLIST_FILE = Resources/ios.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "Tuggle for CUGL";
-				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "This app uses Bluetooth to support features provided by connected devices or system services.\n";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = Portrait;
 				INFOPLIST_KEY_UIMainStoryboardFile = Portrait;
@@ -992,7 +986,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lukeleh.tuggle;
-				PRODUCT_NAME = Tuggle;
+				PRODUCT_NAME = "Tuggle for Cuggle";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

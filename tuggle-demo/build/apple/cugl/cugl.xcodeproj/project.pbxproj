@@ -46,12 +46,12 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		D4C43DF52DD6D9F100AB78C3 /* CUHapticsApple.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4C43DF32DD6D9F100AB78C3 /* CUHapticsApple.mm */; };
-		D4C43DF62DD6D9F100AB78C3 /* CUHapticsStub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4C43DF42DD6D9F100AB78C3 /* CUHapticsStub.cpp */; };
-		D4C43DF72DD6D9F100AB78C3 /* CUHapticsAndroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4C43DF22DD6D9F100AB78C3 /* CUHapticsAndroid.cpp */; };
-		D4C43DF82DD6D9F100AB78C3 /* CUHapticsApple.mm in Sources */ = {isa = PBXBuildFile; fileRef = D4C43DF32DD6D9F100AB78C3 /* CUHapticsApple.mm */; };
-		D4C43DF92DD6D9F100AB78C3 /* CUHapticsStub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4C43DF42DD6D9F100AB78C3 /* CUHapticsStub.cpp */; };
-		D4C43DFA2DD6D9F100AB78C3 /* CUHapticsAndroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D4C43DF22DD6D9F100AB78C3 /* CUHapticsAndroid.cpp */; };
+		184ED5DF2F0500C20085B3D0 /* CUHapticsStub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 184ED5DE2F0500C20085B3D0 /* CUHapticsStub.cpp */; };
+		184ED5E02F0500C20085B3D0 /* CUHapticsAndroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 184ED5DC2F0500C20085B3D0 /* CUHapticsAndroid.cpp */; };
+		184ED5E12F0500C20085B3D0 /* CUHapticsApple.mm in Sources */ = {isa = PBXBuildFile; fileRef = 184ED5DD2F0500C20085B3D0 /* CUHapticsApple.mm */; };
+		184ED5E22F0500C20085B3D0 /* CUHapticsStub.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 184ED5DE2F0500C20085B3D0 /* CUHapticsStub.cpp */; };
+		184ED5E32F0500C20085B3D0 /* CUHapticsAndroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 184ED5DC2F0500C20085B3D0 /* CUHapticsAndroid.cpp */; };
+		184ED5E42F0500C20085B3D0 /* CUHapticsApple.mm in Sources */ = {isa = PBXBuildFile; fileRef = 184ED5DD2F0500C20085B3D0 /* CUHapticsApple.mm */; };
 		EB1E8BC52D3D81D600D0B858 /* CUGradientLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EB1E8BC42D3D81D600D0B858 /* CUGradientLoader.cpp */; };
 		EB413A942D35D28A007E5390 /* libpoly2tri.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB413A932D35D28A007E5390 /* libpoly2tri.a */; };
 		EB413A962D35D300007E5390 /* libpoly2tri.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB413A932D35D28A007E5390 /* libpoly2tri.a */; };
@@ -328,8 +328,6 @@
 		EBAD57D02C3B97A800B77A34 /* CUGameStateEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBDABEEE2B4CC1B7006862AF /* CUGameStateEvent.cpp */; };
 		EBAD57D12C3B97A800B77A34 /* CUNetWorld.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBDABE2B2B49DDE6006862AF /* CUNetWorld.cpp */; };
 		EBAD58A82C3CB2B900B77A34 /* libsdlapp-mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EB9E56DD2B38B0CC0074B480 /* libsdlapp-mac.a */; };
-		EBE871BE2DD2A5F10063831A /* CULocaleGroupLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBE871BD2DD2A5F10063831A /* CULocaleGroupLoader.cpp */; };
-		EBE871BF2DD2A5F10063831A /* CULocaleGroupLoader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EBE871BD2DD2A5F10063831A /* CULocaleGroupLoader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -639,10 +637,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		D4C43DF12DD6D9E200AB78C3 /* CUHaptics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CUHaptics.h; sourceTree = "<group>"; };
-		D4C43DF22DD6D9F100AB78C3 /* CUHapticsAndroid.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CUHapticsAndroid.cpp; sourceTree = "<group>"; };
-		D4C43DF32DD6D9F100AB78C3 /* CUHapticsApple.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CUHapticsApple.mm; sourceTree = "<group>"; };
-		D4C43DF42DD6D9F100AB78C3 /* CUHapticsStub.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CUHapticsStub.cpp; sourceTree = "<group>"; };
+		184ED5DC2F0500C20085B3D0 /* CUHapticsAndroid.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CUHapticsAndroid.cpp; sourceTree = "<group>"; };
+		184ED5DD2F0500C20085B3D0 /* CUHapticsApple.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = CUHapticsApple.mm; sourceTree = "<group>"; };
+		184ED5DE2F0500C20085B3D0 /* CUHapticsStub.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CUHapticsStub.cpp; sourceTree = "<group>"; };
+		184ED5E62F0500D90085B3D0 /* CUHaptics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CUHaptics.h; sourceTree = "<group>"; };
 		EB0703B026B4BFC1001838D6 /* CUTextAlignment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CUTextAlignment.h; sourceTree = "<group>"; };
 		EB07893B1D2D6E3E000BFDF7 /* CUSimpleExtruder.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CUSimpleExtruder.cpp; sourceTree = "<group>"; };
 		EB0789521D3020E3000BFDF7 /* CUInput.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CUInput.cpp; sourceTree = "<group>"; };
@@ -1092,9 +1090,6 @@
 		EBDC806825C0AB1F004DECAE /* CUScene2Texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CUScene2Texture.h; sourceTree = "<group>"; };
 		EBDC807325C0AD57004DECAE /* cu_scene2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cu_scene2.h; sourceTree = "<group>"; };
 		EBDC807525C0AD7D004DECAE /* CUScene2Texture.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CUScene2Texture.cpp; sourceTree = "<group>"; };
-		EBE871BD2DD2A5F10063831A /* CULocaleGroupLoader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CULocaleGroupLoader.cpp; sourceTree = "<group>"; };
-		EBE872072DD2A6A40063831A /* CULocaleGroup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CULocaleGroup.h; sourceTree = "<group>"; };
-		EBE872082DD2A6A40063831A /* CULocaleGroupLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CULocaleGroupLoader.h; sourceTree = "<group>"; };
 		EBF285652B5CAB0F00E91BB4 /* CUGestureRecognizer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CUGestureRecognizer.h; sourceTree = "<group>"; };
 		EBF2856C2B5CAB3B00E91BB4 /* CUGestureRecognizer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CUGestureRecognizer.cpp; sourceTree = "<group>"; };
 		EBF2856F2B5CAB4A00E91BB4 /* CUGameController.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CUGameController.cpp; sourceTree = "<group>"; };
@@ -1190,9 +1185,9 @@
 		EB0789511D302051000BFDF7 /* input */ = {
 			isa = PBXGroup;
 			children = (
-				D4C43DF22DD6D9F100AB78C3 /* CUHapticsAndroid.cpp */,
-				D4C43DF32DD6D9F100AB78C3 /* CUHapticsApple.mm */,
-				D4C43DF42DD6D9F100AB78C3 /* CUHapticsStub.cpp */,
+				184ED5DC2F0500C20085B3D0 /* CUHapticsAndroid.cpp */,
+				184ED5DD2F0500C20085B3D0 /* CUHapticsApple.mm */,
+				184ED5DE2F0500C20085B3D0 /* CUHapticsStub.cpp */,
 				EB0789521D3020E3000BFDF7 /* CUInput.cpp */,
 				EB0789551D302104000BFDF7 /* CUKeyboard.cpp */,
 				EBB96D7B1D31EDB100C2CA07 /* CUMouse.cpp */,
@@ -1552,7 +1547,6 @@
 				EB1C45C42C35D20C00E5FE45 /* CUWidgetValue.cpp */,
 				EB59D5201E251D1F00A93BB5 /* CUJsonLoader.cpp */,
 				EB950C8923DA3BF100E54B1A /* CUWidgetLoader.cpp */,
-				EBE871BD2DD2A5F10063831A /* CULocaleGroupLoader.cpp */,
 			);
 			path = assets;
 			sourceTree = "<group>";
@@ -1786,7 +1780,7 @@
 		EBC2F1621D74A6E5007EC7A6 /* input */ = {
 			isa = PBXGroup;
 			children = (
-				D4C43DF12DD6D9E200AB78C3 /* CUHaptics.h */,
+				184ED5E62F0500D90085B3D0 /* CUHaptics.h */,
 				EBC2F1931D74AA68007EC7A6 /* cu_input.h */,
 				EB0789531D3020E3000BFDF7 /* CUInput.h */,
 				EB0789561D302104000BFDF7 /* CUKeyboard.h */,
@@ -1844,8 +1838,6 @@
 				EB59D51B1E251B8A00A93BB5 /* CUJsonLoader.h */,
 				EB950C9523DA3BFE00E54B1A /* CUWidgetLoader.h */,
 				EBFE7BF81E15E45C001007C2 /* CUGenericLoader.h */,
-				EBE872072DD2A6A40063831A /* CULocaleGroup.h */,
-				EBE872082DD2A6A40063831A /* CULocaleGroupLoader.h */,
 			);
 			path = assets;
 			sourceTree = "<group>";
@@ -2408,7 +2400,6 @@
 				EBAD57012C3B974800B77A34 /* CUPath2.cpp in Sources */,
 				EBAD56F72C3B974000B77A34 /* CUTextWriter.cpp in Sources */,
 				EBAD572A2C3B975000B77A34 /* CUComplexExtruder.cpp in Sources */,
-				EBE871BF2DD2A5F10063831A /* CULocaleGroupLoader.cpp in Sources */,
 				EBAD570B2C3B974800B77A34 /* CUSpline2.cpp in Sources */,
 				EBAD57132C3B974800B77A34 /* CUOrthographicCamera.cpp in Sources */,
 				EBAD56C32C3B971F00B77A34 /* CUAnimateSprite.cpp in Sources */,
@@ -2452,14 +2443,14 @@
 				EBAD56CE2C3B972700B77A34 /* CUAssetManager.cpp in Sources */,
 				EBAD570D2C3B974800B77A34 /* CUQuaternion.cpp in Sources */,
 				EBAD570A2C3B974800B77A34 /* CUMat4.cpp in Sources */,
+				184ED5DF2F0500C20085B3D0 /* CUHapticsStub.cpp in Sources */,
+				184ED5E02F0500C20085B3D0 /* CUHapticsAndroid.cpp in Sources */,
+				184ED5E12F0500C20085B3D0 /* CUHapticsApple.mm in Sources */,
 				EBAD57292C3B975000B77A34 /* CUDelaunayTriangulator.cpp in Sources */,
 				EBAD56DF2C3B972E00B77A34 /* CUTouchscreen.cpp in Sources */,
 				EBAD572C2C3B975000B77A34 /* CUPathFactory.cpp in Sources */,
 				EBAD57302C3B975000B77A34 /* CUSplinePather.cpp in Sources */,
 				EBAD573D2C3B975600B77A34 /* CUStringTools.cpp in Sources */,
-				D4C43DF82DD6D9F100AB78C3 /* CUHapticsApple.mm in Sources */,
-				D4C43DF92DD6D9F100AB78C3 /* CUHapticsStub.cpp in Sources */,
-				D4C43DFA2DD6D9F100AB78C3 /* CUHapticsAndroid.cpp in Sources */,
 				EBAD56DC2C3B972E00B77A34 /* CUGameController.cpp in Sources */,
 				EBAD570F2C3B974800B77A34 /* CUVec2.cpp in Sources */,
 				EBAD56E22C3B972E00B77A34 /* CUTextInput.cpp in Sources */,
@@ -2485,7 +2476,6 @@
 				EBAD57152C3B974900B77A34 /* CUPath2.cpp in Sources */,
 				EBAD56FD2C3B974000B77A34 /* CUTextWriter.cpp in Sources */,
 				EBAD57332C3B975100B77A34 /* CUComplexExtruder.cpp in Sources */,
-				EBE871BE2DD2A5F10063831A /* CULocaleGroupLoader.cpp in Sources */,
 				EBAD571F2C3B974900B77A34 /* CUSpline2.cpp in Sources */,
 				EBAD57272C3B974900B77A34 /* CUOrthographicCamera.cpp in Sources */,
 				EBAD56C72C3B971F00B77A34 /* CUAnimateSprite.cpp in Sources */,
@@ -2529,14 +2519,14 @@
 				EBAD56DA2C3B972800B77A34 /* CUAssetManager.cpp in Sources */,
 				EBAD57212C3B974900B77A34 /* CUQuaternion.cpp in Sources */,
 				EBAD571E2C3B974900B77A34 /* CUMat4.cpp in Sources */,
+				184ED5E22F0500C20085B3D0 /* CUHapticsStub.cpp in Sources */,
+				184ED5E32F0500C20085B3D0 /* CUHapticsAndroid.cpp in Sources */,
+				184ED5E42F0500C20085B3D0 /* CUHapticsApple.mm in Sources */,
 				EBAD57322C3B975100B77A34 /* CUDelaunayTriangulator.cpp in Sources */,
 				EBAD56E62C3B972E00B77A34 /* CUTouchscreen.cpp in Sources */,
 				EBAD57352C3B975100B77A34 /* CUPathFactory.cpp in Sources */,
 				EBAD57392C3B975100B77A34 /* CUSplinePather.cpp in Sources */,
 				EBAD57432C3B975600B77A34 /* CUStringTools.cpp in Sources */,
-				D4C43DF52DD6D9F100AB78C3 /* CUHapticsApple.mm in Sources */,
-				D4C43DF62DD6D9F100AB78C3 /* CUHapticsStub.cpp in Sources */,
-				D4C43DF72DD6D9F100AB78C3 /* CUHapticsAndroid.cpp in Sources */,
 				EBAD56E32C3B972E00B77A34 /* CUGameController.cpp in Sources */,
 				EBAD57232C3B974900B77A34 /* CUVec2.cpp in Sources */,
 				EBAD56E92C3B972E00B77A34 /* CUTextInput.cpp in Sources */,

@@ -2,7 +2,7 @@
 //  cu_input.h
 //  Cornell University Game Library (CUGL)
 //
-//  This header provides access to all of the publicly accessible elements of 
+//  This header provides access to all of the publicly accessible elements of
 //  this package.
 //
 //  CUGL MIT License:

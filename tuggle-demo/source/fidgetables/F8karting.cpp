@@ -220,7 +220,7 @@ void F8karting::update(float timestep) {
   int newTickIndex = angleToTickIndex(_currentAngle);
   if (newTickIndex != _lastTickIndex) {
     // Crossed a tick - trigger haptic
-    Haptics::transient(0.6f, 0.85f);
+    Haptics::heavy();
     _lastTickIndex = newTickIndex;
   }
 

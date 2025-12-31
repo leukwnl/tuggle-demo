@@ -256,6 +256,8 @@ $(LocalDebuggerEnvironment)</LocalDebuggerEnvironment>
 
     <ClInclude Include="..\..\..\source\fidgetables\F7samba.h"/>
 
+    <ClInclude Include="..\..\..\source\fidgetables\HapticButton.h"/>
+
     <ClInclude Include="..\..\..\source\fidgetables\F1tancho.h"/>
 
     <ClInclude Include="..\..\..\source\fidgetables\F5fellowship.h"/>
@@ -279,6 +281,8 @@ $(LocalDebuggerEnvironment)</LocalDebuggerEnvironment>
     <ClCompile Include="..\..\..\source\fidgetables\F6katamari.cpp"/>
 
     <ClCompile Include="..\..\..\source\fidgetables\F3snakeyes.cpp"/>
+
+    <ClCompile Include="..\..\..\source\fidgetables\HapticButton.cpp"/>
 
     <ClCompile Include="..\..\..\source\fidgetables\F7samba.cpp"/>
 

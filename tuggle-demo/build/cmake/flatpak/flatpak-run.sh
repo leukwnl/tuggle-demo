@@ -1,3 +1,3 @@
 #!/bin/sh
 cd /app/data/
-"./Tuggle.exe"
+"./Tuggle for Cuggle.exe"

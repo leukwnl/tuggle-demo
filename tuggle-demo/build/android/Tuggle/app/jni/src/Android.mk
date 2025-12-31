@@ -19,8 +19,8 @@ LOCAL_C_INCLUDES += $(SDL2_PATH)/include
 LOCAL_C_INCLUDES += $(CUGL_PATH)/external/libdatachannel/include
 LOCAL_C_INCLUDES += $(CUGL_PATH)/external/box2d/include
 LOCAL_C_INCLUDES += $(CUGL_PATH)/external/poly2tri
-LOCAL_C_INCLUDES += $(PROJ_PATH)/source
 LOCAL_C_INCLUDES += $(PROJ_PATH)/source/fidgetables
+LOCAL_C_INCLUDES += $(PROJ_PATH)/source
 
 
 # Add your application source files here.
@@ -34,6 +34,7 @@ LOCAL_SRC_FILES := $(subst $(LOCAL_PATH)/,, \
 	$(LOCAL_PATH)/source/fidgetables/F5fellowship.cpp \
 	$(LOCAL_PATH)/source/fidgetables/F6katamari.cpp \
 	$(LOCAL_PATH)/source/fidgetables/F3snakeyes.cpp \
+	$(LOCAL_PATH)/source/fidgetables/HapticButton.cpp \
 	$(LOCAL_PATH)/source/fidgetables/F7samba.cpp \
 	$(LOCAL_PATH)/source/fidgetables/F4traffic.cpp \
 	$(LOCAL_PATH)/source/fidgetables/F1tancho.cpp \
