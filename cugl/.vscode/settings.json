@@ -1,0 +1,16 @@
+{
+  "cmake.sourceDirectory": "C:/trigger-happy/cugl/buildfiles/cmake",
+  "files.associations": {
+    "atomic": "cpp",
+    "chrono": "cpp",
+    "iomanip": "cpp",
+    "istream": "cpp",
+    "list": "cpp",
+    "ostream": "cpp",
+    "random": "cpp",
+    "sstream": "cpp",
+    "streambuf": "cpp",
+    "xfacet": "cpp",
+    "xlocbuf": "cpp"
+  }
+}
