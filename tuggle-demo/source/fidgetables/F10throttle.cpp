@@ -153,7 +153,7 @@ void F10throttle::buildGauge() {
 
 void F10throttle::buildGearControls() {
   float centerX = _pageSize.width / 2;
-  float controlsY = _pageSize.height * 0.30f;
+  float controlsY = _pageSize.height * 0.40f;
 
   // Gear level indicator bars (5 bars for gears 1-5)
   float barWidth = _pageSize.width * 0.08f;
@@ -660,14 +660,6 @@ void F10throttle::updateHaptics() {
     maxIntensity = 1.0f;
     baseSharpness = 0.6f;
     maxSharpness = 0.9f;
-    break;
-  case Gear::REVERSE:
-    floorIntensity = 0.2f;
-    floorSharpness = 0.1f;
-    baseIntensity = 0.4f;
-    maxIntensity = 0.6f;
-    baseSharpness = 0.15f;
-    maxSharpness = 0.3f;
     break;
   }
 

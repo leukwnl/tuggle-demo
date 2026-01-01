@@ -92,10 +92,10 @@ protected:
   static constexpr float VELOCITY_DECAY = 0.90f;
 
   /** Wall bounce coefficient - very low, almost no bounce */
-  static constexpr float WALL_RESTITUTION = 0.05f;
+  static constexpr float WALL_RESTITUTION = 0.8f;
 
   /** Ball-ball bounce coefficient - low bounce */
-  static constexpr float BALL_RESTITUTION = 0.1f;
+  static constexpr float BALL_RESTITUTION = 0.8f;
 
   /** Minimum collision velocity for haptic */
   static constexpr float MIN_COLLISION_VELOCITY = 40.0f;

@@ -57,7 +57,7 @@ protected:
   float _buttonRadius;
   
   // Timing constants
-  static constexpr float POP_TIME = 2.3f;
+  static constexpr float POP_TIME = 2.0f;
   static constexpr float MAX_SCALE = 1.25f;
   static constexpr float FADE_OUT_DURATION = 0.2f;
   static constexpr float RESPAWN_DELAY = 0.5f;
