@@ -27,9 +27,11 @@
 #include "fidgetables/F6katamari.h"
 #include "fidgetables/F7samba.h"
 #include "fidgetables/F8karting.h"
+#include "fidgetables/F9soundboard.h"
+#include "fidgetables/F10throttle.h"
 
 /** Number of fidgetables in the carousel */
-#define NUM_FIDGETABLES 8
+#define NUM_FIDGETABLES 10
 
 /** Snap animation duration in seconds */
 #define SNAP_DURATION 0.3f
@@ -53,24 +55,28 @@
  * scrollPos = pageWidth shows page 1
  * scrollPos = pageIndex * pageWidth shows page N
  */
-class SwipeCarouselController {
+class SwipeCarouselController
+{
 protected:
   /** The scene this controller belongs to */
   std::shared_ptr<cugl::scene2::Scene2> _scene;
 
-  /** Container node that holds all fidgetable pages (scrolls horizontally) */
+  /** The asset manager for loading sounds */
+  std::shared_ptr<cugl::AssetManager> _assets;
+
+  /** Container node that holds all fidgetable pages */
   std::shared_ptr<cugl::scene2::SceneNode> _container;
 
   /** Array of all fidgetable views */
   std::vector<std::shared_ptr<FidgetableView>> _fidgetables;
 
-  /** The width of each page (typically screen width) */
+  /** The width of each page */
   float _pageWidth;
 
-  /** The height of each page (typically screen height) */
+  /** The height of each page */
   float _pageHeight;
 
-  /** Current scroll position (0 = first page, pageWidth = second page, etc.) */
+  /** Current scroll position */
   float _scrollPos;
 
   /** Target scroll position for snap animation */
@@ -79,13 +85,13 @@ protected:
   /** Whether we're currently animating a snap */
   bool _isSnapping;
 
-  /** Animation progress (0 to 1) */
+  /** Animation progress */
   float _snapProgress;
 
   /** Starting scroll position for snap animation */
   float _snapStartPos;
 
-  /** Currently active page index (0-7) */
+  /** Currently active page index */
   int _activePageIndex;
 
   // Drag tracking state
@@ -95,7 +101,7 @@ protected:
   /** Scroll position when drag began */
   float _scrollStartPos;
 
-  /** Position where drag started (for delta calculation) */
+  /** Position where drag started */
   cugl::Vec2 _dragStartPos;
 
   /** Scale factor from screen to scene coordinates */
@@ -115,8 +121,8 @@ protected:
   /**
    * Calculates the nearest page index to snap to.
    *
-   * @param velocity  The swipe velocity (used to bias direction)
-   * @return The page index to snap to (0-7)
+   * @param velocity  The swipe velocity
+   * @return The page index to snap to
    */
   int calculateSnapTarget(float velocity);
 
@@ -169,17 +175,20 @@ public:
    * @param scene     The scene to add the carousel to
    * @param pageSize  The size of each page
    * @param screenToSceneScale  Scale factor for coordinate conversion
+   * @param assets    The asset manager for loading sounds (optional)
    * @return true if initialization succeeded
    */
   bool init(std::shared_ptr<cugl::scene2::Scene2> scene,
-            const cugl::Size &pageSize, float screenToSceneScale = 1.0f);
+            const cugl::Size &pageSize, float screenToSceneScale = 1.0f,
+            std::shared_ptr<cugl::AssetManager> assets = nullptr);
 
   /**
    * Static allocator for SwipeCarouselController.
    */
   static std::shared_ptr<SwipeCarouselController>
   alloc(std::shared_ptr<cugl::scene2::Scene2> scene, const cugl::Size &pageSize,
-        float screenToSceneScale = 1.0f);
+        float screenToSceneScale = 1.0f,
+        std::shared_ptr<cugl::AssetManager> assets = nullptr);
 
   /**
    * Disposes of all resources.
@@ -200,7 +209,8 @@ public:
    *
    * @return The container node
    */
-  std::shared_ptr<cugl::scene2::SceneNode> getContainer() const {
+  std::shared_ptr<cugl::scene2::SceneNode> getContainer() const
+  {
     return _container;
   }
 
@@ -214,14 +224,14 @@ public:
   /**
    * Returns the current active page index.
    *
-   * @return Page index (0-7)
+   * @return Page index
    */
   int getActivePageIndex() const { return _activePageIndex; }
 
   /**
    * Programmatically scrolls to a specific page.
    *
-   * @param pageIndex The page to scroll to (0-7)
+   * @param pageIndex The page to scroll to
    * @param animated  Whether to animate the scroll
    */
   void scrollToPage(int pageIndex, bool animated = true);

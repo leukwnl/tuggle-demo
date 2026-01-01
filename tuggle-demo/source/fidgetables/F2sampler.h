@@ -2,7 +2,7 @@
 //  F2sampler.h
 //  Tuggle
 //
-//  Second fidgetable toy - a 2x2 grid of buttons with different haptic styles.
+//  Second fidgetable toy - a grid of buttons demonstrating all haptic styles.
 //
 
 #ifndef __F2sampler_H__
@@ -14,25 +14,29 @@
 
 /**
  * Second fidgetable toy in the carousel.
- * Displays 4 buttons in a 2x2 grid, each with a different haptic style:
- * - Top-left: RATTLE (velocity-based transients)
- * - Top-right: BUZZ (soft continuous feel)
- * - Bottom-left: TICK (sharp distinct ticks)
- * - Bottom-right: THUMP (heavy distance-based thumps)
+ * Displays 7 buttons showcasing all available haptic styles:
+ * - Row 1: RATTLE, BUZZ, TICK
+ * - Row 2: THUMP, TAP
+ * - Row 3: BUZZ_PULSE, SELECTION
+ *
+ * Each button demonstrates a different haptic method from the Haptics class.
  */
 class F2sampler : public FidgetableView {
 protected:
-  /** The four haptic buttons */
-  std::array<HapticButton, 4> _buttons;
+  /** Number of haptic style buttons */
+  static constexpr int NUM_BUTTONS = 7;
+
+  /** The haptic buttons - one for each style */
+  std::array<HapticButton, NUM_BUTTONS> _buttons;
 
   /** Track which buttons are currently active (for multi-touch) */
-  std::array<bool, 4> _buttonActive = {false, false, false, false};
+  std::array<bool, NUM_BUTTONS> _buttonActive = {};
 
   /** Button radius ratio relative to page width */
-  static constexpr float BUTTON_RADIUS_RATIO = 0.12f;
+  static constexpr float BUTTON_RADIUS_RATIO = 0.09f;
 
   /** Spacing between buttons */
-  static constexpr float BUTTON_SPACING_RATIO = 0.08f;
+  static constexpr float BUTTON_SPACING_RATIO = 0.06f;
 
   void buildContent() override;
 

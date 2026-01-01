@@ -26,6 +26,7 @@ LOCAL_C_INCLUDES += $(PROJ_PATH)/source
 # Add your application source files here.
 LOCAL_PATH = $(PROJ_PATH)
 LOCAL_SRC_FILES := $(subst $(LOCAL_PATH)/,, \
+	$(LOCAL_PATH)/source/AudioController.cpp \
 	$(LOCAL_PATH)/source/InputController.cpp \
 	$(LOCAL_PATH)/source/FidgetableView.cpp \
 	$(LOCAL_PATH)/source/FidgetApp.cpp \
@@ -39,7 +40,9 @@ LOCAL_SRC_FILES := $(subst $(LOCAL_PATH)/,, \
 	$(LOCAL_PATH)/source/fidgetables/F4traffic.cpp \
 	$(LOCAL_PATH)/source/fidgetables/F1tancho.cpp \
 	$(LOCAL_PATH)/source/fidgetables/F2sampler.cpp \
-	$(LOCAL_PATH)/source/fidgetables/F8karting.cpp)
+	$(LOCAL_PATH)/source/fidgetables/F8karting.cpp \
+	$(LOCAL_PATH)/source/fidgetables/F9soundboard.cpp \
+	$(LOCAL_PATH)/source/fidgetables/F10throttle.cpp)
 
 # Link in SDL2
 LOCAL_SHARED_LIBRARIES := SDL2

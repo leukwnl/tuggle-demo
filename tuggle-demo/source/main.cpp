@@ -2,8 +2,6 @@
 //  main.cpp
 //  Cornell University Game Library (CUGL)
 //
-//  This is the main entry class for your application.  You may need to modify
-//  it slightly for your application class or platform.
 //
 //  CUGL zlib License:
 //      This software is provided 'as-is', without any express or implied
@@ -44,26 +42,29 @@ using namespace cugl;
  *
  * @return the exit status of the application
  */
-int main(int argc, char * argv[]) {
+int main(int argc, char *argv[])
+{
     FidgetApp app;
-    
+
     /// SET YOUR APPLICATION PROPERTIES
     app.setName("Tuggle");
     app.setOrganization("Innate Studios");
     app.setDisplaySize(GAME_WIDTH, GAME_HEIGHT);
     app.setFPS(60.0f);
     app.setHighDPI(true);
-    
+
     /// DO NOT MODIFY ANYTHING BELOW THIS LINE
-    if (!app.init()) {
+    if (!app.init())
+    {
         return 1;
     }
-    
+
     // Run the application until completion
     app.onStartup();
-    while (app.step());
+    while (app.step())
+        ;
     app.onShutdown();
-    
-    exit(0);    // Necessary to quit on mobile devices
-    return 0;   // This line is never reached
+
+    exit(0);  // Necessary to quit on mobile devices
+    return 0; // This line is never reached
 }

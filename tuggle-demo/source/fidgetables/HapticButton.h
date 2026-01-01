@@ -15,25 +15,34 @@
 /**
  * Haptic style determines how the button feels when interacted with.
  */
-enum class HapticStyle {
-  /** Velocity-based transient haptics (like F1tancho) */
+enum class HapticStyle
+{
+  /** Velocity-based transient haptics (uses Haptics::transient) */
   RATTLE,
-  /** Soft continuous buzz while dragging */
+  /** Soft continuous buzz while dragging (uses Haptics::transient) */
   BUZZ,
-  /** Sharp ticks at regular intervals */
+  /** Sharp ticks at regular intervals (uses Haptics::transient) */
   TICK,
-  /** Heavy thumps based on distance from center */
-  THUMP
+  /** Heavy thumps based on distance from center (uses Haptics::transient) */
+  THUMP,
+  /** Variable intensity tap (uses Haptics::tap - UIImpactFeedbackGenerator) */
+  TAP,
+  /** Short continuous buzz on press (uses Haptics::buzz) */
+  BUZZ_PULSE,
+  /** Selection feedback on each movement (uses Haptics::selection) */
+  SELECTION
 };
 
 /**
  * A reusable draggable button with spring physics and haptic feedback.
  * Can be configured with different haptic styles for variety.
  */
-class HapticButton {
+class HapticButton
+{
 public:
   // Configuration
-  struct Config {
+  struct Config
+  {
     float radius;
     cugl::Color4 normalColor;
     cugl::Color4 pressedColor;
@@ -43,37 +52,36 @@ public:
     float springK;
     float pressedScale;
     float animDuration;
-    float sceneHeight;  // For screen-to-scene scale calculation
-    
-    Config() :
-      radius(50.0f),
-      normalColor(100, 149, 237, 255),
-      pressedColor(70, 119, 207, 255),
-      inactiveColor(150, 180, 220, 255),
-      hapticStyle(HapticStyle::RATTLE),
-      maxDragDistance(12.0f),
-      springK(0.4f),
-      pressedScale(0.85f),
-      animDuration(0.12f),
-      sceneHeight(1024.0f) {}
+    float sceneHeight; // For screen-to-scene scale calculation
+
+    Config() : radius(50.0f),
+               normalColor(100, 149, 237, 255),
+               pressedColor(70, 119, 207, 255),
+               inactiveColor(150, 180, 220, 255),
+               hapticStyle(HapticStyle::RATTLE),
+               maxDragDistance(12.0f),
+               springK(0.4f),
+               pressedScale(0.85f),
+               animDuration(0.12f),
+               sceneHeight(1024.0f) {}
   };
 
 private:
   std::shared_ptr<cugl::scene2::Button> _button;
   std::shared_ptr<cugl::scene2::PolygonNode> _buttonNode;
-  
+
   Config _config;
   cugl::Vec2 _originalPos;
   cugl::Vec2 _dragOffset;
   cugl::Vec2 _dragVelocity;
   cugl::Vec2 _lastPointerPos;
-  
+
   bool _isPressed = false;
   bool _isDragging = false;
   bool _isActive = true;
   float _currentScale = 1.0f;
   float _hapticCooldown = 0.0f;
-  
+
   // Haptic parameters (velocity in scene units/second)
   static constexpr float MAX_HAPTIC_VELOCITY = 1000.0f;
   static constexpr float MIN_HAPTIC_INTENSITY = 0.05f;
@@ -88,7 +96,7 @@ public:
   /**
    * Initializes the button at the given position.
    */
-  bool init(cugl::Vec2 position, const Config& config = Config());
+  bool init(cugl::Vec2 position, const Config &config = Config());
 
   /**
    * Returns the underlying CUGL button node.
@@ -132,4 +140,3 @@ public:
 };
 
 #endif /* __HAPTIC_BUTTON_H__ */
-

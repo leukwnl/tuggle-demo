@@ -16,7 +16,8 @@
  * The phone acts as a steering wheel. Rotating the phone triggers
  * haptic ticks at regular angle intervals, like notches on a wheel.
  */
-class F8karting : public FidgetableView {
+class F8karting : public FidgetableView
+{
 protected:
   // Visual elements
   /** The steering wheel outer ring */

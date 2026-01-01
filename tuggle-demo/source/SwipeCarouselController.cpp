@@ -24,11 +24,13 @@ SwipeCarouselController::~SwipeCarouselController() { dispose(); }
 
 bool SwipeCarouselController::init(std::shared_ptr<Scene2> scene,
                                    const Size &pageSize,
-                                   float screenToSceneScale) {
+                                   float screenToSceneScale,
+                                   std::shared_ptr<AssetManager> assets) {
   _scene = scene;
   _pageWidth = pageSize.width;
   _pageHeight = pageSize.height;
   _screenToSceneScale = screenToSceneScale;
+  _assets = assets;
 
   // Create the container node that will hold all pages
   // This container scrolls horizontally
@@ -57,11 +59,12 @@ bool SwipeCarouselController::init(std::shared_ptr<Scene2> scene,
 
 std::shared_ptr<SwipeCarouselController>
 SwipeCarouselController::alloc(std::shared_ptr<Scene2> scene,
-                               const Size &pageSize, float screenToSceneScale) {
+                               const Size &pageSize, float screenToSceneScale,
+                               std::shared_ptr<AssetManager> assets) {
 
   std::shared_ptr<SwipeCarouselController> result =
       std::make_shared<SwipeCarouselController>();
-  if (result->init(scene, pageSize, screenToSceneScale)) {
+  if (result->init(scene, pageSize, screenToSceneScale, assets)) {
     return result;
   }
   return nullptr;
@@ -138,6 +141,44 @@ void SwipeCarouselController::buildFidgetables() {
   f8->getNode()->setPosition(Vec2(7 * _pageWidth, 0));
   _container->addChild(f8->getNode());
   _fidgetables.push_back(f8);
+
+  // Fidgetable 9 - Soundboard
+  auto f9 = F9soundboard::alloc(pageSize);
+  f9->getNode()->setPosition(Vec2(8 * _pageWidth, 0));
+  _container->addChild(f9->getNode());
+  _fidgetables.push_back(f9);
+
+  // Configure F9soundboard with sounds from asset manager
+  if (_assets != nullptr) {
+    for (int i = 0; i < 9; i++) {
+      std::string soundKey = "f9_sound_" + std::to_string(i);
+      auto sound = _assets->get<audio::Sound>(soundKey);
+      if (sound != nullptr) {
+        f9->setSound(i, sound);
+      }
+    }
+//    // Configure haptic files (all use the same fanfare.ahap for now)
+//    for (int i = 0; i < 9; i++) {
+//      f9->setHapticFile(i, "fanfare.ahap");
+//    }
+  }
+    f9->setHapticFile(0, "fanfare.ahap");
+    f9->setHapticFile(1, "gamecube.ahap");
+    f9->setHapticFile(2, "counter.ahap");
+    f9->setHapticFile(3, "eating.ahap");
+    f9->setHapticFile(4, "kricketune.ahap");
+    f9->setHapticFile(5, "lalilulelo.ahap");
+    f9->setHapticFile(6, "oof.ahap");
+    f9->setHapticFile(7, "trick.ahap");
+    f9->setHapticFile(8, "sans.ahap");
+
+
+
+  // Fidgetable 10 - Throttle (HapticPlayer demo)
+  auto f10 = F10throttle::alloc(pageSize);
+  f10->getNode()->setPosition(Vec2(9 * _pageWidth, 0));
+  _container->addChild(f10->getNode());
+  _fidgetables.push_back(f10);
 }
 
 #pragma mark -

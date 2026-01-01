@@ -1,4 +1,42 @@
 {
+    "sounds": {
+        "f9_sound_0": {
+            "type": "sample",
+            "file": "fanfare.ogg"
+        },
+        "f9_sound_1": {
+            "type": "sample",
+            "file": "gamecube.ogg"
+        },
+        "f9_sound_2": {
+            "type": "sample",
+            "file": "counter.ogg"
+        },
+        "f9_sound_3": {
+            "type": "sample",
+            "file": "eating.ogg"
+        },
+        "f9_sound_4": {
+            "type": "sample",
+            "file": "kricketune.ogg"
+        },
+        "f9_sound_5": {
+            "type": "sample",
+            "file": "lalilulelo.ogg"
+        },
+        "f9_sound_6": {
+            "type": "sample",
+            "file": "oof.ogg"
+        },
+        "f9_sound_7": {
+            "type": "sample",
+            "file": "trick.ogg"
+        },
+        "f9_sound_8": {
+            "type": "sample",
+            "file": "sans.ogg"
+        }
+    },
     "textures": {
         "logo": {
             "file":     "textures/logo.png",

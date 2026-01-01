@@ -3,10 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 55;
+	objectVersion = 70;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184ED5F62F05A3DD0085B3D0 /* AudioController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 184ED5F52F05A3DD0085B3D0 /* AudioController.cpp */; };
+		184ED5F72F05A3DD0085B3D0 /* AudioController.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 184ED5F52F05A3DD0085B3D0 /* AudioController.cpp */; };
+		184ED6062F05A4690085B3D0 /* F9soundboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 184ED6052F05A4690085B3D0 /* F9soundboard.cpp */; };
+		184ED6072F05A4690085B3D0 /* F9soundboard.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 184ED6052F05A4690085B3D0 /* F9soundboard.cpp */; };
+		184ED60A2F05A6B80085B3D0 /* F10throttle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 184ED6092F05A6B80085B3D0 /* F10throttle.cpp */; };
+		184ED60B2F05A6B80085B3D0 /* F10throttle.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 184ED6092F05A6B80085B3D0 /* F10throttle.cpp */; };
 		AB084F9D0E7DEE813F658313 /* textures in Resources */ = {isa = PBXBuildFile; fileRef = AACD441E407C552AECEE9B33 /* textures */; };
 		ABBCECE05884D7F0EED5F50D /* json in Resources */ = {isa = PBXBuildFile; fileRef = AA1BA6EDE03659A8C6BB7FDA /* json */; };
 		ABEB4F30ABE79246F2AF327A /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = AACD79EE60E78EEA58EF7CC9 /* fonts */; };
@@ -168,6 +174,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		184ED5F42F05A3DD0085B3D0 /* AudioController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AudioController.h; sourceTree = "<group>"; };
+		184ED5F52F05A3DD0085B3D0 /* AudioController.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AudioController.cpp; sourceTree = "<group>"; };
+		184ED6042F05A4690085B3D0 /* F9soundboard.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = F9soundboard.h; sourceTree = "<group>"; };
+		184ED6052F05A4690085B3D0 /* F9soundboard.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = F9soundboard.cpp; sourceTree = "<group>"; };
+		184ED6082F05A6B80085B3D0 /* F10throttle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = F10throttle.h; sourceTree = "<group>"; };
+		184ED6092F05A6B80085B3D0 /* F10throttle.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = F10throttle.cpp; sourceTree = "<group>"; };
 		AA1BA6EDE03659A8C6BB7FDA /* json */ = {isa = PBXFileReference; lastKnownFileType = folder; path = json; sourceTree = "<group>"; };
 		AACD441E407C552AECEE9B33 /* textures */ = {isa = PBXFileReference; lastKnownFileType = folder; path = textures; sourceTree = "<group>"; };
 		AACD79EE60E78EEA58EF7CC9 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
@@ -241,6 +253,11 @@
 		EBE2E0172B794BED0091FF11 /* CoreAudioTypes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioTypes.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreAudioTypes.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		184ED6112F05BC980085B3D0 /* haptics */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = haptics; sourceTree = "<group>"; };
+		184ED61E2F05DADD0085B3D0 /* sounds */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = sounds; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
 /* Begin PBXFrameworksBuildPhase section */
 		EB0F3C9327FB9DCB0037CC66 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
@@ -307,6 +324,10 @@
 		CD8BDC440556A5569B9EE7F4 /* fidgetables */ = {
 			isa = PBXGroup;
 			children = (
+				184ED6082F05A6B80085B3D0 /* F10throttle.h */,
+				184ED6092F05A6B80085B3D0 /* F10throttle.cpp */,
+				184ED6042F05A4690085B3D0 /* F9soundboard.h */,
+				184ED6052F05A4690085B3D0 /* F9soundboard.cpp */,
 				BAD235265C7693BCAC1AE3C3 /* F5fellowship.cpp */,
 				BA8C3DAB9F3A2E5B735E6CA6 /* F6katamari.cpp */,
 				BAC6AC3767ECF3ECC64812F1 /* F3snakeyes.cpp */,
@@ -353,6 +374,8 @@
 		EB0F3C9827FB9DCB0037CC66 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				184ED5F42F05A3DD0085B3D0 /* AudioController.h */,
+				184ED5F52F05A3DD0085B3D0 /* AudioController.cpp */,
 				BAF1FD7E13A92DBFCFC0BB0B /* InputController.cpp */,
 				BA9FAC0D6FAEBC2C4D71ABEF /* FidgetableView.cpp */,
 				BA022E8353ED6FBDEB472EC6 /* FidgetApp.cpp */,
@@ -432,6 +455,8 @@
 		EB23B0F828BFF70E001EA958 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
+				184ED61E2F05DADD0085B3D0 /* sounds */,
+				184ED6112F05BC980085B3D0 /* haptics */,
 				AACD441E407C552AECEE9B33 /* textures */,
 				AA1BA6EDE03659A8C6BB7FDA /* json */,
 				AACD79EE60E78EEA58EF7CC9 /* fonts */,
@@ -479,6 +504,10 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				184ED6112F05BC980085B3D0 /* haptics */,
+				184ED61E2F05DADD0085B3D0 /* sounds */,
+			);
 			name = "tuggle-mac";
 			productName = app;
 			productReference = EB0F3C9627FB9DCB0037CC66 /* Tuggle for Cuggle.app */;
@@ -496,6 +525,10 @@
 			);
 			dependencies = (
 			);
+			fileSystemSynchronizedGroups = (
+				184ED6112F05BC980085B3D0 /* haptics */,
+				184ED61E2F05DADD0085B3D0 /* sounds */,
+			);
 			name = "tuggle-ios";
 			productName = "tuggle-ios";
 			productReference = EBC7AEC227FBB41F001F1467 /* Tuggle for Cuggle.app */;
@@ -512,9 +545,11 @@
 				TargetAttributes = {
 					EB0F3C9527FB9DCB0037CC66 = {
 						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 2610;
 					};
 					EBC7AEC127FBB41F001F1467 = {
 						CreatedOnToolsVersion = 13.3;
+						LastSwiftMigration = 2610;
 					};
 				};
 			};
@@ -651,16 +686,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBE3FCF6D3DDCA82CABE21AB /* InputController.cpp in Sources */,
+				184ED6072F05A4690085B3D0 /* F9soundboard.cpp in Sources */,
 				BBEB7F91FDDBC4F7D67CDB76 /* FidgetableView.cpp in Sources */,
 				BB7BCBEF7D9B95ACCBCD93A1 /* FidgetApp.cpp in Sources */,
 				BBF60F12DBFDFA4EBA88AD6F /* SwipeCarouselController.cpp in Sources */,
 				BB0C5A5D28A65554CEF76EE4 /* main.cpp in Sources */,
 				BB7FDB6F500165F806109AE3 /* F5fellowship.cpp in Sources */,
 				BBAC294D90DE4BCD948FFB8B /* F6katamari.cpp in Sources */,
+				184ED5F72F05A3DD0085B3D0 /* AudioController.cpp in Sources */,
 				BBCFC0FCCAFDF2EDD613DAB7 /* F3snakeyes.cpp in Sources */,
 				BBACDC1F7BB4E8BF100F8CDF /* HapticButton.cpp in Sources */,
 				BBB8FBFBF1FBFCEAFB0F3CDB /* F7samba.cpp in Sources */,
 				BB6C6B9FBBF8A58EE7C6A9B5 /* F4traffic.cpp in Sources */,
+				184ED60B2F05A6B80085B3D0 /* F10throttle.cpp in Sources */,
 				BBCF590CECE90BA5EE6AADD2 /* F1tancho.cpp in Sources */,
 				BBEC15FAD15CFE6CBD7CDB09 /* F2sampler.cpp in Sources */,
 				BB9ED15A5C8FD6CDF0D9D6CE /* F8karting.cpp in Sources */,
@@ -672,16 +710,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				BC1BA06BBD42FF24AB5B0AF5 /* InputController.cpp in Sources */,
+				184ED6062F05A4690085B3D0 /* F9soundboard.cpp in Sources */,
 				BC98F44CAECC5CA61B5E4CAC /* FidgetableView.cpp in Sources */,
 				BC5FDE54BC9D22BD66C2FF7C /* FidgetApp.cpp in Sources */,
 				BC6E3B58AED5F38C17FA6FE3 /* SwipeCarouselController.cpp in Sources */,
 				BCFAAB022CD9CD93B6D5BD01 /* main.cpp in Sources */,
 				BC9A1822D8E5F73A72A4F9C2 /* F5fellowship.cpp in Sources */,
 				BC5FBBDBF8F7456C14ABEB4E /* F6katamari.cpp in Sources */,
+				184ED5F62F05A3DD0085B3D0 /* AudioController.cpp in Sources */,
 				BCB4EB365C5F1B043B353E27 /* F3snakeyes.cpp in Sources */,
 				BCEBEADE7E8FFDA9CBCFAF95 /* HapticButton.cpp in Sources */,
 				BCC9F1DB66F2D8FB5B272D8E /* F7samba.cpp in Sources */,
 				BCA54130C02BDB4CBF4ABDAA /* F4traffic.cpp in Sources */,
+				184ED60A2F05A6B80085B3D0 /* F10throttle.cpp in Sources */,
 				BC98E4E3BCFFBF4A59E4EA3B /* F1tancho.cpp in Sources */,
 				BC415FC0B61DE5ACBB9CD639 /* F2sampler.cpp in Sources */,
 				BCA1335B5F7C4BC7AC4E0D11 /* F8karting.cpp in Sources */,
@@ -834,6 +875,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "$(PROJECT_DIR)/resources/macos.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
@@ -865,6 +907,8 @@
 				PRODUCT_NAME = "Tuggle for Cuggle";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 			};
 			name = Debug;
 		};
@@ -873,6 +917,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "$(PROJECT_DIR)/resources/macos.entitlements";
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Manual;
@@ -904,6 +949,7 @@
 				PRODUCT_NAME = "Tuggle for Cuggle";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
 			};
 			name = Release;
 		};
@@ -913,6 +959,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y6ND74X834;
@@ -946,6 +993,8 @@
 				PRODUCT_NAME = "Tuggle for Cuggle";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -956,6 +1005,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Y6ND74X834;
@@ -989,6 +1039,7 @@
 				PRODUCT_NAME = "Tuggle for Cuggle";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};

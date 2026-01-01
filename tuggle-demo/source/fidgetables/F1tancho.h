@@ -2,7 +2,7 @@
 //  F1tancho.h
 //  Tuggle
 //
-//  First fidgetable toy - a single interactive button.
+// A button that can slide in any direction.
 //
 
 #ifndef __F1TANCHO_H__
@@ -11,11 +11,8 @@
 #include "FidgetableView.h"
 #include <cugl/core/input/CUHaptics.h>
 
-/**
- * First fidgetable toy in the carousel.
- * Currently displays a single circular button.
- */
-class F1tancho : public FidgetableView {
+class F1tancho : public FidgetableView
+{
 protected:
   /** The interactive button */
   std::shared_ptr<cugl::scene2::Button> _button;

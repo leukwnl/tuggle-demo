@@ -7,6 +7,9 @@
 //
 
 #include "FidgetApp.h"
+#include "AudioController.h"
+#include <cugl/audio/CUAudioEngine.h>
+#include <cugl/audio/CUSoundLoader.h>
 #include <cugl/core/input/CUAccelerometer.h>
 #include <cugl/core/input/CUHaptics.h>
 
@@ -23,7 +26,8 @@ using namespace cugl::scene2;
 #pragma mark -
 #pragma mark Application Lifecycle
 
-void FidgetApp::onStartup() {
+void FidgetApp::onStartup()
+{
   _scene = Scene2::allocWithHint(Size(0, GAME_HEIGHT));
 
   // Create sprite batch and set background color
@@ -35,6 +39,7 @@ void FidgetApp::onStartup() {
   _assets = AssetManager::alloc();
   _assets->attach<Texture>(TextureLoader::alloc()->getHook());
   _assets->attach<Font>(FontLoader::alloc()->getHook());
+  _assets->attach<audio::Sound>(audio::SoundLoader::alloc()->getHook());
 
   // Load assets from JSON
   _assets->loadDirectory("json/assets.json");
@@ -47,26 +52,35 @@ void FidgetApp::onStartup() {
   // Initialize haptic feedback system
   Haptics::init();
 
-  // Activate accelerometer for F6katamari
+  // Initialize audio engine and controller for F9soundboard
+  audio::AudioEngine::start();
+  AudioController::start();
+
+  // Activate accelerometer
   Input::activate<Accelerometer>();
 
-  // Build the scene with carousel
+  // Build the scene
   buildScene();
 
-  // Call parent startup (transitions to FOREGROUND state)
+  // Call parent startup
   Application::onStartup();
 
-  // Log safe area info for debugging
-  Rect bounds = getSafeBounds();
-  CULog("Safe Area: %sx%s", bounds.origin.toString().c_str(),
-        bounds.size.toString().c_str());
-  CULog("Drag left/right to navigate between fidgetables");
-  CULog("Tap the centered circle to interact");
+  // // Log safe area info for debugging
+  // Rect bounds = getSafeBounds();
+  // CULog("Safe Area: %sx%s", bounds.origin.toString().c_str(),
+  //       bounds.size.toString().c_str());
+  // CULog("Drag left/right to navigate between fidgetables");
+  // CULog("Tap the centered circle to interact");
 }
 
-void FidgetApp::onShutdown() {
+void FidgetApp::onShutdown()
+{
   // Deactivate accelerometer
   Input::deactivate<Accelerometer>();
+
+  // Stop audio controller and engine (controller first since it uses engine)
+  AudioController::stop();
+  audio::AudioEngine::stop();
 
   // Dispose haptic feedback system
   Haptics::dispose();
@@ -76,7 +90,8 @@ void FidgetApp::onShutdown() {
   InputController::release();
 
   // Dispose carousel
-  if (_carousel != nullptr) {
+  if (_carousel != nullptr)
+  {
     _carousel->dispose();
     _carousel = nullptr;
   }
@@ -92,15 +107,16 @@ void FidgetApp::onShutdown() {
 #pragma mark -
 #pragma mark Scene Building
 
-void FidgetApp::buildScene() {
+void FidgetApp::buildScene()
+{
   // Get display size and calculate scale
   Size displaySize = getDisplaySize();
   _screenToSceneScale = GAME_HEIGHT / displaySize.height;
   Size scaledSize = displaySize * _screenToSceneScale;
 
-  // Create the carousel controller with the scale factor
+  // Create the carousel controller with the scale factor and asset manager
   _carousel =
-      SwipeCarouselController::alloc(_scene, scaledSize, _screenToSceneScale);
+      SwipeCarouselController::alloc(_scene, scaledSize, _screenToSceneScale, _assets);
 
   // Activate button inputs after adding to scene
   _carousel->activateInputs();
@@ -113,13 +129,15 @@ void FidgetApp::buildScene() {
 #pragma mark -
 #pragma mark Game Loop
 
-void FidgetApp::update(float timestep) {
+void FidgetApp::update(float timestep)
+{
   // Update the InputController first (processes input state)
   InputController *input = InputController::getInstance();
   input->update(timestep);
 
   // Update the carousel (uses InputController for input)
-  if (_carousel != nullptr) {
+  if (_carousel != nullptr)
+  {
     _carousel->update(timestep);
   }
 
@@ -127,7 +145,8 @@ void FidgetApp::update(float timestep) {
   input->clearInteractionFlags();
 }
 
-void FidgetApp::draw() {
+void FidgetApp::draw()
+{
   // Render the scene graph
   _scene->render();
 }

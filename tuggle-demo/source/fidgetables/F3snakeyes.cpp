@@ -2,7 +2,7 @@
 //  F3snakeyes.cpp
 //  Tuggle
 //
-//  Implementation of F3snakeyes - six toggle buttons with continuous haptics.
+//  Six toggle buttons with continuous haptics.
 //  3 rows x 2 columns:
 //    Left = rumble (low sharpness), Right = tick (high sharpness)
 //    Top to bottom = slow, medium, fast interval speeds
@@ -27,8 +27,8 @@ static const Color4 BUTTON_COLORS[] = {
 
 static const Color4 BUTTON_COLORS_PRESSED[] = {
     Color4(225, 170, 150, 255), Color4(150, 170, 225, 255),
-    Color4(225, 110, 70, 255),  Color4(70, 120, 225, 255),
-    Color4(225, 50, 30, 255),   Color4(30, 70, 225, 255)};
+    Color4(225, 110, 70, 255), Color4(70, 120, 225, 255),
+    Color4(225, 50, 30, 255), Color4(30, 70, 225, 255)};
 
 static const Color4 BUTTON_COLORS_INACTIVE[] = {
     Color4(200, 185, 175, 255), Color4(175, 185, 200, 255),
@@ -53,8 +53,10 @@ static const float BUTTON_INTERVALS[] = {0.12f, 0.12f, 0.06f,
 #pragma mark -
 #pragma mark Constructors
 
-F3snakeyes::F3snakeyes() : FidgetableView(), _buttonRadius(50.0f) {
-  for (int i = 0; i < NUM_BUTTONS; i++) {
+F3snakeyes::F3snakeyes() : FidgetableView(), _buttonRadius(50.0f)
+{
+  for (int i = 0; i < NUM_BUTTONS; i++)
+  {
     _toggleStates[i] = false;
     _currentScales[i] = 1.0f;
     _hapticTimers[i] = 0.0f;
@@ -63,22 +65,28 @@ F3snakeyes::F3snakeyes() : FidgetableView(), _buttonRadius(50.0f) {
 
 F3snakeyes::~F3snakeyes() { dispose(); }
 
-bool F3snakeyes::init(int index, const cugl::Size &pageSize) {
+bool F3snakeyes::init(int index, const cugl::Size &pageSize)
+{
   _buttonRadius = pageSize.width * BUTTON_RADIUS_RATIO;
   return FidgetableView::init(index, pageSize);
 }
 
-std::shared_ptr<F3snakeyes> F3snakeyes::alloc(const cugl::Size &pageSize) {
+std::shared_ptr<F3snakeyes> F3snakeyes::alloc(const cugl::Size &pageSize)
+{
   auto result = std::make_shared<F3snakeyes>();
-  if (result->init(3, pageSize)) {
+  if (result->init(3, pageSize))
+  {
     return result;
   }
   return nullptr;
 }
 
-void F3snakeyes::dispose() {
-  for (int i = 0; i < NUM_BUTTONS; i++) {
-    if (_buttons[i] != nullptr) {
+void F3snakeyes::dispose()
+{
+  for (int i = 0; i < NUM_BUTTONS; i++)
+  {
+    if (_buttons[i] != nullptr)
+    {
       _buttons[i]->deactivate();
       _buttons[i]->clearListeners();
       _buttons[i] = nullptr;
@@ -91,7 +99,8 @@ void F3snakeyes::dispose() {
 #pragma mark -
 #pragma mark Content Building
 
-void F3snakeyes::buildContent() {
+void F3snakeyes::buildContent()
+{
   float spacing = _pageSize.width * SPACING_RATIO;
   float gridWidth = GRID_COLS * (_buttonRadius * 2) + (GRID_COLS - 1) * spacing;
   float gridHeight =
@@ -100,7 +109,8 @@ void F3snakeyes::buildContent() {
   Vec2 gridOrigin((_pageSize.width - gridWidth) / 2 + _buttonRadius,
                   (_pageSize.height - gridHeight) / 2 + _buttonRadius);
 
-  for (int i = 0; i < NUM_BUTTONS; i++) {
+  for (int i = 0; i < NUM_BUTTONS; i++)
+  {
     int col = i % GRID_COLS;
     int row = (GRID_ROWS - 1) - (i / GRID_COLS);
 
@@ -119,8 +129,10 @@ void F3snakeyes::buildContent() {
 
     int btnIndex = i;
     _buttons[i]->addListener(
-        [this, btnIndex](const std::string &name, bool down) {
-          if (!down && _isActive) {
+        [this, btnIndex](const std::string &name, bool down)
+        {
+          if (!down && _isActive)
+          {
             onToggle(btnIndex);
           }
         });
@@ -132,7 +144,8 @@ void F3snakeyes::buildContent() {
 #pragma mark -
 #pragma mark Interaction
 
-void F3snakeyes::onToggle(int index) {
+void F3snakeyes::onToggle(int index)
+{
   _toggleStates[index] = !_toggleStates[index];
   _hapticTimers[index] = 0.0f; // Reset timer to play immediately
 
@@ -141,40 +154,52 @@ void F3snakeyes::onToggle(int index) {
         BUTTON_INTERVALS[index] * 1000);
 
   // Play feedback on toggle
-  if (_toggleStates[index]) {
+  if (_toggleStates[index])
+  {
     Haptics::transient(1.0f, BUTTON_SHARPNESS[index]);
-  } else {
+  }
+  else
+  {
     Haptics::light();
   }
 }
 
-void F3snakeyes::update(float timestep) {
+void F3snakeyes::update(float timestep)
+{
   FidgetableView::update(timestep);
 
   // Animate button scales
-  for (int i = 0; i < NUM_BUTTONS; i++) {
+  for (int i = 0; i < NUM_BUTTONS; i++)
+  {
     if (_buttons[i] == nullptr)
       continue;
 
     float targetScale = _toggleStates[i] ? TOGGLED_SCALE : 1.0f;
 
-    if (std::abs(_currentScales[i] - targetScale) > 0.001f) {
+    if (std::abs(_currentScales[i] - targetScale) > 0.001f)
+    {
       float speed = timestep / ANIM_DURATION;
       float diff = targetScale - _currentScales[i];
       _currentScales[i] += diff * std::min(1.0f, speed * 6.0f);
       _buttons[i]->setScale(_currentScales[i]);
-    } else {
+    }
+    else
+    {
       _currentScales[i] = targetScale;
       _buttons[i]->setScale(_currentScales[i]);
     }
   }
 
   // Per-button haptic timers
-  if (_isActive) {
-    for (int i = 0; i < NUM_BUTTONS; i++) {
-      if (_toggleStates[i]) {
+  if (_isActive)
+  {
+    for (int i = 0; i < NUM_BUTTONS; i++)
+    {
+      if (_toggleStates[i])
+      {
         _hapticTimers[i] -= timestep;
-        if (_hapticTimers[i] <= 0.0f) {
+        if (_hapticTimers[i] <= 0.0f)
+        {
           Haptics::transient(1.0f, BUTTON_SHARPNESS[i]);
           _hapticTimers[i] = BUTTON_INTERVALS[i];
         }
@@ -183,29 +208,39 @@ void F3snakeyes::update(float timestep) {
   }
 }
 
-void F3snakeyes::setActive(bool active) {
+void F3snakeyes::setActive(bool active)
+{
   FidgetableView::setActive(active);
 
-  for (int i = 0; i < NUM_BUTTONS; i++) {
-    if (_buttonNodes[i] != nullptr) {
-      if (active) {
+  for (int i = 0; i < NUM_BUTTONS; i++)
+  {
+    if (_buttonNodes[i] != nullptr)
+    {
+      if (active)
+      {
         _buttonNodes[i]->setColor(BUTTON_COLORS[i]);
-      } else {
+      }
+      else
+      {
         _buttonNodes[i]->setColor(BUTTON_COLORS_INACTIVE[i]);
       }
     }
   }
 }
 
-void F3snakeyes::activateInputs() {
-  for (auto &btn : _buttons) {
+void F3snakeyes::activateInputs()
+{
+  for (auto &btn : _buttons)
+  {
     if (btn != nullptr)
       btn->activate();
   }
 }
 
-void F3snakeyes::deactivateInputs() {
-  for (auto &btn : _buttons) {
+void F3snakeyes::deactivateInputs()
+{
+  for (auto &btn : _buttons)
+  {
     if (btn != nullptr)
       btn->deactivate();
   }

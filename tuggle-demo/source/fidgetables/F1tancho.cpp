@@ -28,21 +28,26 @@ F1tancho::F1tancho()
 
 F1tancho::~F1tancho() { dispose(); }
 
-bool F1tancho::init(int index, const cugl::Size &pageSize) {
+bool F1tancho::init(int index, const cugl::Size &pageSize)
+{
   _buttonRadius = pageSize.width * BUTTON_RADIUS_RATIO;
   return FidgetableView::init(index, pageSize);
 }
 
-std::shared_ptr<F1tancho> F1tancho::alloc(const cugl::Size &pageSize) {
+std::shared_ptr<F1tancho> F1tancho::alloc(const cugl::Size &pageSize)
+{
   std::shared_ptr<F1tancho> result = std::make_shared<F1tancho>();
-  if (result->init(1, pageSize)) {
+  if (result->init(1, pageSize))
+  {
     return result;
   }
   return nullptr;
 }
 
-void F1tancho::dispose() {
-  if (_button != nullptr) {
+void F1tancho::dispose()
+{
+  if (_button != nullptr)
+  {
     _button->deactivate();
     _button->clearListeners();
     _button = nullptr;
@@ -54,7 +59,8 @@ void F1tancho::dispose() {
 #pragma mark -
 #pragma mark Content Building
 
-void F1tancho::buildContent() {
+void F1tancho::buildContent()
+{
   // Calculate center position
   Vec2 centerPos(_pageSize.width / 2, _pageSize.height / 2);
 
@@ -75,15 +81,15 @@ void F1tancho::buildContent() {
   _button->setName("f1tancho_button");
 
   // Set up listener - handle both press and release
-  _button->addListener([this](const std::string &name, bool down) {
+  _button->addListener([this](const std::string &name, bool down)
+                       {
     if (_isActive) {
       if (down) {
         onPressed();
       } else {
         onReleased();
       }
-    }
-  });
+    } });
 
   // Add to root node
   _rootNode->addChild(_button);
@@ -92,7 +98,8 @@ void F1tancho::buildContent() {
 #pragma mark -
 #pragma mark Interaction
 
-void F1tancho::onPressed() {
+void F1tancho::onPressed()
+{
   CULog("F1tancho pressed");
 
   // Trigger initial haptic feedback for button press
@@ -113,7 +120,8 @@ void F1tancho::onPressed() {
   _hapticCooldown = 0.0f;
 }
 
-void F1tancho::onReleased() {
+void F1tancho::onReleased()
+{
   CULog("F1tancho released");
 
   // Mark as released (will animate back to normal)
@@ -128,12 +136,14 @@ void F1tancho::onReleased() {
   _dragVelocity = Vec2::ZERO;
 
   // Reset button to original position
-  if (_button != nullptr) {
+  if (_button != nullptr)
+  {
     _button->setPosition(_originalPos);
   }
 }
 
-void F1tancho::updateDrag(float timestep) {
+void F1tancho::updateDrag(float timestep)
+{
   if (!_isDragging || _button == nullptr)
     return;
 
@@ -147,9 +157,6 @@ void F1tancho::updateDrag(float timestep) {
   Size displaySize = Application::get()->getDisplaySize();
   float scale = _pageSize.height / displaySize.height;
   pointerDelta = pointerDelta * scale;
-
-  // Flip Y axis: screen coordinates have Y increasing downward,
-  // but scene coordinates have Y increasing upward
   pointerDelta.y = -pointerDelta.y;
 
   // Calculate velocity for haptics
@@ -160,9 +167,9 @@ void F1tancho::updateDrag(float timestep) {
   Vec2 targetOffset = _dragOffset + pointerDelta;
 
   // Apply spring resistance - the further from center, the more we dampen
-  // movement
   float targetDist = targetOffset.length();
-  if (targetDist > 0.001f) {
+  if (targetDist > 0.001f)
+  {
     // Non-linear spring: movement is dampened more as we approach max distance
     float normalizedDist = std::min(targetDist / MAX_DRAG_DISTANCE, 1.0f);
     float dampening = 1.0f - (SPRING_K * normalizedDist * normalizedDist);
@@ -173,7 +180,8 @@ void F1tancho::updateDrag(float timestep) {
 
     // Hard clamp to maximum distance
     float clampedDist = targetOffset.length();
-    if (clampedDist > MAX_DRAG_DISTANCE) {
+    if (clampedDist > MAX_DRAG_DISTANCE)
+    {
       targetOffset = targetOffset.getNormalization() * MAX_DRAG_DISTANCE;
     }
   }
@@ -188,18 +196,20 @@ void F1tancho::updateDrag(float timestep) {
   triggerRattleHaptic(velocityMag, timestep);
 }
 
-void F1tancho::triggerRattleHaptic(float velocity, float timestep) {
+void F1tancho::triggerRattleHaptic(float velocity, float timestep)
+{
   // Decrease cooldown
   _hapticCooldown -= timestep;
   if (_hapticCooldown > 0.0f)
     return;
 
-  // Calculate intensity based on velocity (0.0 to 1.0)
+  // Calculate intensity based on velocity
   float intensity =
       std::min(velocity, MAX_HAPTIC_VELOCITY) / MAX_HAPTIC_VELOCITY;
 
   // Only trigger if intensity is above threshold
-  if (intensity > MIN_HAPTIC_INTENSITY) {
+  if (intensity > MIN_HAPTIC_INTENSITY)
+  {
     cugl::Haptics::transient(intensity, 0.5f);
     // Set cooldown - faster velocity = shorter cooldown (more frequent taps)
     float cooldownScale = 1.0f - (intensity * 0.5f);
@@ -207,50 +217,64 @@ void F1tancho::triggerRattleHaptic(float velocity, float timestep) {
   }
 }
 
-void F1tancho::update(float timestep) {
+void F1tancho::update(float timestep)
+{
   FidgetableView::update(timestep);
 
   // Update drag interaction
   updateDrag(timestep);
 
   // Animate button scale based on pressed state
-  if (_button != nullptr) {
+  if (_button != nullptr)
+  {
     float targetScale = _isPressed ? PRESSED_SCALE : 1.0f;
 
-    if (std::abs(_currentScale - targetScale) > 0.001f) {
+    if (std::abs(_currentScale - targetScale) > 0.001f)
+    {
       // Ease out interpolation toward target
       float speed = timestep / ANIM_DURATION;
       float diff = targetScale - _currentScale;
       _currentScale += diff * std::min(1.0f, speed * 8.0f);
       _button->setScale(_currentScale);
-    } else {
+    }
+    else
+    {
       _currentScale = targetScale;
       _button->setScale(_currentScale);
     }
   }
 }
 
-void F1tancho::setActive(bool active) {
+void F1tancho::setActive(bool active)
+{
   FidgetableView::setActive(active);
 
   // Update button appearance based on active state
-  if (_buttonNode != nullptr) {
-    if (active) {
+  if (_buttonNode != nullptr)
+  {
+    if (active)
+    {
       _buttonNode->setColor(BUTTON_COLOR_NORMAL);
-    } else {
+    }
+    else
+    {
       _buttonNode->setColor(BUTTON_COLOR_INACTIVE);
     }
   }
 }
 
-void F1tancho::activateInputs() {
-  if (_button != nullptr) {
+void F1tancho::activateInputs()
+{
+  if (_button != nullptr)
+  {
     _button->activate();
   }
 }
 
-void F1tancho::deactivateInputs() {
-  if (_button != nullptr) {
+void F1tancho::deactivateInputs()
+{
+  if (_button != nullptr)
+  {
     _button->deactivate();
   }
 }
