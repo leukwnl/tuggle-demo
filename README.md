@@ -1,6 +1,13 @@
-# Tuggle
+<div align="center">
 
-An app of mobile fidget toys built on CUGL, designed to showcase the capabilities of the [`tugl`](https://github.com/leukwnl/tugl) haptics library with code demonstrations.
+# Tuggle
+### Mobile fidget toys built on CUGL
+
+<p>
+  <img width="280" height="1024" alt="logo" src="https://github.com/user-attachments/assets/2e696841-ba03-4846-89ea-ce1156032fd9" />
+  <img width="280" height="300" alt="qr" src="https://github.com/user-attachments/assets/065e3c18-29ed-48d9-83fd-52cd92ad479c" />
+</p>
+</div>
 
 ## Credits
 
