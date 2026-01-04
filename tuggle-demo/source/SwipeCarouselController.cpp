@@ -186,6 +186,7 @@ void SwipeCarouselController::buildFidgetables() {
   f10->getNode()->setPosition(Vec2(9 * _pageWidth, 0));
   _container->addChild(f10->getNode());
   _fidgetables.push_back(f10);
+    _fidgetables[0]->setActive(true);
 }
 
 void SwipeCarouselController::buildPaginationDots() {

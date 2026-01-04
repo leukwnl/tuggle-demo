@@ -978,6 +978,7 @@
 					"$(DATACH_INCLUDES)",
 				);
 				INFOPLIST_FILE = Resources/ios.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Tuggle;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = Portrait;
 				INFOPLIST_KEY_UIMainStoryboardFile = Portrait;
@@ -992,10 +993,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lukeleh.tuggle;
 				PRODUCT_NAME = "Tuggle for Cuggle";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1024,6 +1029,7 @@
 					"$(DATACH_INCLUDES)",
 				);
 				INFOPLIST_FILE = Resources/ios.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Tuggle;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = Portrait;
 				INFOPLIST_KEY_UIMainStoryboardFile = Portrait;
@@ -1038,9 +1044,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.lukeleh.tuggle;
 				PRODUCT_NAME = "Tuggle for Cuggle";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
